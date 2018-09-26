@@ -1,0 +1,71 @@
+.navbar-brand{
+  background-color: yellow;
+}
+.box{
+  background-color:white;
+  width: 70%;
+  padding:70px;
+  height:1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body{
+  background-color:#C0C0C0;
+
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    align-border:center;
+}
+
+input[type=text]:focus {
+    width: 50%;
+
+}
+.show{
+  display: block;
+}
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+.gallery{width: 100px;
+height: 350px;}
+.x{width: 200px;
+height: 150px;}

@@ -1,0 +1,109 @@
+<% include parts/header %>
+ <style>
+ .navbar-brand{
+   background-color: yellow;
+ }
+body{
+  background-color:lightgray;
+}
+     #body{
+         background-color: white;
+         box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+         padding: 15px;
+         margin-bottom: 10px;
+     }
+     #body2{
+         background-color: lightgray;
+         box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+         padding: 0px;
+     }
+     #media-title{
+         font-size: 36px;
+     }
+     #media-img{
+         border-radius: 6px;
+         margin-bottom: 5px;
+
+     }
+     #episodes{
+         background-color: lightgray;
+         box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+         margin-bottom: 10px;
+     }
+     #epiDetails{
+         width: 100%;
+     }
+     #cusPanel{
+         border-right: 0px;
+         border-left: 0px;
+     }
+     .epiDetails{
+         border-left: 5px solid #333;
+         content: " ";
+         margin-left: 4px;
+     }
+     .epiData{
+         margin-left:10px;
+         font-size:16px;
+         font-weight:normal;
+         color:#888;
+     }
+     #epiData{
+         margin-left: 7px;
+     }
+     #heart{
+         text-align: right;
+     }
+ </style>
+
+
+<div class="container col-md-10 col-md-offset-1" id="body">
+
+    <div class="media">
+    <div class="media-left media-top">
+       <img src="image/2.jpeg" alt=""class="media-object" style="width:200px" id="media-img">
+        <a href="Login.ejs">
+          <button type="button" class="btn btn-primary btn-block">Login to Subscribe</button>
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading" id="media-title"> Gulaebaghavali <span class="pull-right text-danger glyphicon glyphicon-heart"> 9.5</span></h4>
+      <h4> <span class="glyphicon glyphicon-calendar text-danger"></span>Sunday <u>06:30 PM</u> on Sun Tv </h4>
+      <p>A don sends three petty criminals to recover a treasure that was buried by his grandfather in the village of Gulaebaghavali.</p>
+
+    </div>
+  </div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="container col-md-10 col-md-offset-1" id="body2">
+<div class="panel panel-default" id="cusPanel">
+  <div class="panel-heading"><span class="glyphicon glyphicon-film"></span> Next Movie</div>
+    <div class="panel-body">
+
+        <!-- Episode Details Starts Here-->
+        <div class="row col-md-12">
+            <div class="epiDetails">
+                <h3 id="epiData"><b>Oru nalla nall pathu solran</b> <span class="epiData">Movie </span></h3>
+                <span class="glyphicon glyphicon-calendar" id="epiData"></span>2018/07/08 6:30 PM
+                <p id="epiData"> Oru Nalla Naal Paathu Solren is a Indian 2018 Tamil language black comedy drama film, written and directed by P. Arumuga Kumar. </p>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<% include parts/footer %>

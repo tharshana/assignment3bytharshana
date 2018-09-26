@@ -1,0 +1,40 @@
+<% include parts/header %>
+<style media="screen">
+.navbar-brand{
+  background-color: yellow;
+}
+  .modal-footer{
+    text-align: left!important;
+  }
+    .modal-content{
+    width: 70%;
+    padding: 20px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+<div class="modal-content">
+  <div class="modal-header">
+<a href="index.html"><button type="button" class="close" data-dismiss="modal">&times;</button></a>
+
+    <h4 class="modal-title">Add movie</h4>
+  </div>
+  <div class="modal-body">
+    <form class="" action="index.html" method="post">
+<div class="form-group">
+  <label for="email">Name</label>
+  <input type="email" class="form-control" id="email" placeholder="enter the movie" name="email" onchange="check(email);">
+</div>
+  </form>
+  </div>
+  <p id="message"></p>
+  <div class="modal-footer">
+    <button style="margin-bottom:5px !important;width:100px !important;"onclick="add(email)" type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+  </div>
+</div>
+
+</div>
+</div>
+
+<% include parts/footer %>
