@@ -1,3 +1,6 @@
+var getUrl = window.location;
+var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+console.log(baseUrl);
 
 //filtered
 select("all")
@@ -198,3 +201,257 @@ var users = [{
   doner:"vavitha22"
 }
 ];
+
+function filtA(){
+  var x = "A";
+  search(x);
+
+}
+function filtB(){
+  var x = "B";
+  search(x);
+
+}
+function filtC(){
+  var x = "C";
+  search(x);
+
+}
+function filtD(){
+  var x = "D";
+  search(x);
+
+}
+function filtE(){
+  var x = "E";
+  search(x);
+
+}
+function filtF(){
+  var x = "F";
+  search(x);
+
+}
+function filtG(){
+  var x = "G";
+  search(x);
+
+}
+function filtH(){
+  var x = "H";
+  search(x);
+
+}
+function filtI(){
+  var x = "I";
+  search(x);
+
+}
+function filtJ(){
+  var x = "J" ;
+  search(x);
+
+}
+function filtK(){
+  var x = "K";
+  search(x);
+
+}
+function filtL(){
+  var x = "L";
+  search(x);
+
+}
+function filtM(){
+  var x = "M";
+  search(x);
+
+}
+function filtN(){
+  var x = "N";
+  search(x);
+
+}
+function filtO(){
+  var x = "O";
+  search(x);
+
+}
+function filtP(){
+  var x = "P";
+  search(x);
+
+}
+function filtQ(){
+  var x = "Q";
+  search(x);
+
+}
+function filtR(){
+  var x = "R";
+  search(x);
+
+}
+function filtS(){
+  var x = "S";
+  search(x);
+
+}
+function filtT(){
+  var x = "T";
+  search(x);
+
+}
+function filtU(){
+  var x = "U";
+  search(x);
+
+}
+function filtV(){
+  var x = "V";
+  search(x);
+
+}
+function filtW(){
+  var x = "W";
+  search(x);
+
+}
+function filtX(){
+  var x = "X";
+  search(x);
+
+}
+function filtY(){
+  var x = "Y";
+  search(x);
+
+}
+function filtZ(){
+  var x = "Z";
+  search(x);
+
+}
+
+function xearch(y){
+  var x = y.value;
+  search(x);
+}
+
+function search(x){
+  document.getElementById('rootus').innerHTML = "";
+  var dat = x;
+  console.log(dat);
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function (){
+    if(this.readyState == 4 && this.status == 200){
+      var data = JSON.parse(this.responseText);
+
+      console.log(data);
+      for (var i = 0; i < 20; i++) {
+        if (data[i].banner !== "") {
+          document.getElementById('rootus').innerHTML += '<div class="blacksat"> <div class="trendsetter"><img style="width:100%" src="https://www.thetvdb.com/banners/'+data[i].banner+'" alt=""></div><div class="ititle"><p style="text-align:center;"><a style="text-align:center; margin-left:auto;  width:100%; margin-right:auto; display:block;" class="title" href="'+baseUrl+'desc/'+data[i].id+'">'+data[i].seriesName+'</p></a><p style="font-size:2vw; text-align:center;"><b>Network :</b> '+data[i].network+'</p></div></div>'
+        }
+      }
+    }
+  }
+
+  xhttp.open("GET", baseUrl+"search/"+dat, true);
+  xhttp.send();
+}
+// 
+// function subscribelog(){
+//   var mail = document.getElementById('subloguname').value;
+//   var password = document.getElementById('sublogpassword').value;
+//   var seriesid = document.getElementById('cryid').innerHTML;
+//
+//   var params = "mail="+mail+"&password="+password+"&sid="+seriesid;
+//
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function (){
+//     if(this.readyState == 4 && this.status == 200){
+//       var data = JSON.parse(this.responseText);
+//       console.log(data);
+//
+//       if(data.status == true || data == true){
+//         document.getElementById('id01').style.display='none'
+//         document.getElementById('subbedbut').classList.remove("hidden");
+//         document.getElementById('zub').classList.add("hidden");
+//
+//       }else{
+//         document.getElementById('zub').classList.remove("hidden");
+//       }
+//       // console.log("Mocked");
+//     }
+//   }
+//
+//
+//   xhttp.open("PUT", baseUrl + '/sublog', true);
+//   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//   xhttp.send(params);
+// }
+//
+//
+//
+//
+// function subscribe(){
+//   var name = document.getElementById('cryname').innerHTML;
+//   var firstAired = document.getElementById('cryfa').innerHTML;
+//   var network = document.getElementById('crynet').innerHTML;
+//   var overview = document.getElementById('cryview').innerHTML;
+//   var status = document.getElementById('crystatus').innerHTML;
+//   var id = document.getElementById('cryid').innerHTML;
+//   var subid = document.getElementById('suber').innerHTML;
+//
+//   var params = "name="+name+"&firstAired="+firstAired+"&network="+network+"&overview="+overview+"&status="+status+"&subid="+subid;
+//
+//   console.log(params);
+//
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function (){
+//     if(this.readyState == 4 && this.status == 200){
+//       var data = JSON.parse(this.responseText);
+//       console.log(data);
+//       document.getElementById('subbedbut').classList.remove("hidden");
+//       document.getElementById('subsbut').classList.add("hidden");
+//     }
+//   }
+//
+//
+//   xhttp.open("PUT", baseUrl+"/subscribe/"+id, true);
+//   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//   xhttp.send(params);
+// }
+//
+// if(getUrl.pathname == "/desc/"+document.getElementById('cryid').innerHTML && document.getElementById('suber').innerHTML !== null || undefined){
+//   console.log("hello world");
+//   checksubscribe();
+// }
+//
+//
+// function checksubscribe(){
+//   var showit = document.getElementById('suber').innerHTML;
+//   var id = document.getElementById('cryid').innerHTML;
+//
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function (){
+//     if(this.readyState == 4 && this.status == 200){
+//       // console.log(this.responseText);
+//       var data = JSON.parse(this.responseText);
+//         if(data.subscriber.includes(showit)){
+//           console.log("found");
+//           document.getElementById('subbedbut').classList.remove("hidden");
+//         }
+//         else{
+//           document.getElementById('subsbut').classList.remove("hidden");
+//           console.log("Not found");
+//         }
+//       // console.log(data.subscriber);
+//     }
+//   }
+//
+//
+//   xhttp.open("GET", baseUrl+"/checksubscribe/"+id, true);
+//   xhttp.send();
+// }
